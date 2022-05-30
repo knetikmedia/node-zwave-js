@@ -1315,7 +1315,7 @@ export class Driver
 
 		// Avoid having multiple restart timeouts active
 		if (this.retryNodeInterviewTimeouts.has(node.id)) {
-			clearTimeout(this.retryNodeInterviewTimeouts.get(node.id)!);
+			clearTimeout(this.retryNodeInterviewTimeouts.get(node.id));
 			this.retryNodeInterviewTimeouts.delete(node.id);
 		}
 
@@ -1714,11 +1714,11 @@ export class Driver
 		// Remove all listeners and timers
 		this.removeNodeEventHandlers(node);
 		if (this.sendNodeToSleepTimers.has(node.id)) {
-			clearTimeout(this.sendNodeToSleepTimers.get(node.id)!);
+			clearTimeout(this.sendNodeToSleepTimers.get(node.id));
 			this.sendNodeToSleepTimers.delete(node.id);
 		}
 		if (this.retryNodeInterviewTimeouts.has(node.id)) {
-			clearTimeout(this.retryNodeInterviewTimeouts.get(node.id)!);
+			clearTimeout(this.retryNodeInterviewTimeouts.get(node.id));
 			this.retryNodeInterviewTimeouts.delete(node.id);
 		}
 		// purge node values from the DB
@@ -4107,7 +4107,7 @@ ${handlers.length} left`,
 		// TODO: This should be a single command to the send thread
 		// Delete old timers if any exist
 		if (this.sendNodeToSleepTimers.has(node.id)) {
-			clearTimeout(this.sendNodeToSleepTimers.get(node.id)!);
+			clearTimeout(this.sendNodeToSleepTimers.get(node.id));
 		}
 
 		// Sends a node to sleep if it has no more messages.

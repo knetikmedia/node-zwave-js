@@ -64,13 +64,13 @@
     "@serialport/binding-mock": "^10.2.2",
     "@serialport/bindings-interface": "*",
     "@serialport/stream": "*",
-    "@types/jest": "^27.4.1",
-    "@types/node": "^14.18.16",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^14.18.18",
     "@zwave-js/testing": "workspace:*",
-    "ansi-colors": "^4.1.1",
-    "esbuild": "0.14.38",
+    "ansi-colors": "^4.1.3",
+    "esbuild": "0.14.42",
     "esbuild-register": "^3.3.2",
     "jest-extended": "^2.0.0",
-    "typescript": "4.6.4"
+    "typescript": "4.7.2"
   }
 }
